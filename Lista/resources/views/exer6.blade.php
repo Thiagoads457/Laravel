@@ -13,7 +13,7 @@
     <div class="container mt-5">
         <h2 class="text-center mb-4">Converter Temperatura</h2>
         <form action="/respostaExer6" method="POST" class="border p-4 rounded">
-            @csrf <!-- Certifique-se de que está correto -->
+            @csrf 
             <div class="row mb-3">
                 <div class="col-md-6">
                     <input type="number" name="celsius" id="celsius" class="form-control" placeholder="Temperatura em Celsius" required>

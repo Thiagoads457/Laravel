@@ -17,7 +17,7 @@
             @CSRF
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <input type="number" name="celsius" id="celsius" class="form-control" placeholder="Temperatura em Fahrenheit " required>
+                    <input type="number" name="fahrenheit" id="fahrenheit" class="form-control" placeholder="Temperatura em Fahrenheit " required>
                 </div>
             </div>
 
