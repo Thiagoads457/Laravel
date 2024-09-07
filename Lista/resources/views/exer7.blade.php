@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/js/app.js')
-    <title>Exercicio 6</title>
+    <title>Exercicio 7</title>
     
 </head>
 
 <body>
     <div class="container mt-5">
+                    
     <h2 class="text-center mb-4">Converter Temperatura</h2>
-        <form action="/respostaExer6" method="POST" class="border p-4 rounded">
+        <form action="/respostaExer7" method="POST" class="border p-4 rounded">
             @CSRF
             <div class="row mb-3">
                 <div class="col-md-6">
-                    
-                    <input type="number" name="celsius" id="celsius" class="form-control" placeholder="Temperatura em Celsius" required>
+                    <input type="number" name="celsius" id="celsius" class="form-control" placeholder="Temperatura em Fahrenheit " required>
                 </div>
             </div>
 

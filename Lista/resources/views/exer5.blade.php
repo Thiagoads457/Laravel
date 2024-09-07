@@ -7,19 +7,33 @@
     <title>Exercício 5</title>
 </head>
 <body>
-    <form action="/respostaExer5" method="POST">
-        @CSRF
-        <input type="number" name="valor1">
-        <input type="number" name="valor2">
-        <input type="number" name="valor3">
-        <button type="submit">Calcular Média</button>
+    <div class="container mt-5">
 
-        <div class="row">
-            <div class="col">
-                <button type="submit" class="btn btn-success mt-2"> Converter </button>
+    <h2 class="text-center mb-4">Calcular Média</h2>
+        <form action="/respostaExer6" method="POST" class="border p-4 rounded">
+            @CSRF
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="valor1" class="form-label">1ª Nota</label>
+                    <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Nota 1" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="valor2" class="form-label">2ª Nota</label>
+                    <input type="number" name="valor2" id="valor2" class="form-control" placeholder="Nota 2" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="valor3" class="form-label">3ª Nota</label>
+                    <input type="number" name="valor3" id="valor3" class="form-control" placeholder="Nota 3" required>
+                </div>
             </div>
-            <script src="{{ asset('js/app.js') }}"></script>
-    </form>
-    
+
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-success mt-2">Converter</button>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
+
 </html>

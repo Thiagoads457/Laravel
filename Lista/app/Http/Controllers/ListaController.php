@@ -76,4 +76,72 @@ class ListaController extends Controller
         $fahrenheit = ($celsius * 9/5) + 32;
         return "Temperatura em Fahrenheit: $fahrenheit";
     }
+
+    public function mostrarExer7(){
+        return view("exer7");
+    }
+
+    public function mostrarExer8(){
+        return view("exer8");
+    }
+
+
+    public function mostrarExer9(){
+        return view("exer9");
+    }
+
+
+    public function mostrarExer10(){
+        return view("exer10");
+    }
+
+
+    public function mostrarExer11(){
+        return view("exer11");
+    }
+
+
+    public function mostrarExer12(){
+        return view("exer12");
+    }
+
+
+    public function mostrarExer13(){
+        return view("exer13");
+    }
+
+
+    public function mostrarExer14(){
+        return view("exer14");
+    }
+
+
+    public function mostrarExer15(){
+        return view("exer15");
+    }
+
+
+    public function mostrarExer16(){
+        return view("exer16");
+    }
+
+
+    public function mostrarExer17(){
+        return view("exer17");
+    }
+
+
+    public function mostrarExer18(){
+        return view("exer18");
+    }
+
+
+    public function mostrarExer19(){
+        return view("exer19");
+    }
+
+
+    public function mostrarExer20(){
+        return view("exer20");
+    }
 }
