@@ -75,7 +75,7 @@ class ListaController extends Controller
         $celsius = (int) $request->input('celsius');
         $fahrenheit = ($celsius * 9/5) + 32;
     
-        // Armazenando o resultado na sessão
+        
         return redirect()->back()->with('resultado',"Temperatura em Fahrenheit: $fahrenheit");
     }
     
