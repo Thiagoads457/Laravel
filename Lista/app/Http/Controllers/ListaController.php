@@ -110,7 +110,6 @@ class ListaController extends Controller
         $resultado = $valor1 * $valor2;
         
         return redirect()->back()->with('resultado', "A área do retângulo é de $resultado ");
-
     }
 
     
@@ -122,8 +121,7 @@ class ListaController extends Controller
         $valor1 = (float) $request->input('valor1');
         $resultado = pi() * pow($valor1,2);
 
-        return redirect()->back()->with('resultado', "A área do círculo é: " . round($valor1, 2) . " unidades quadradas");
-        
+        return redirect()->back()->with('resultado', "A área do círculo é: " . round($resultado, 2) . " unidades quadradas");        
     }
 
 
@@ -131,9 +129,25 @@ class ListaController extends Controller
         return view("exer10");
     }
 
+    public function calcularExer10(Request $request){
+        $valor1 = (float) $request->input('valor1');
+        $valor2 = (float) $request->input('valor2');
+        $resultado = 2* ($valor1 + $valor2);
+        
+        return redirect()->back()->with('resultado', "O perímetro do retângulo é de" .$resultado." unidades");
+
+    }
+
 
     public function mostrarExer11(){
         return view("exer11");
+    }
+
+    public function calcularExer11(Request $request){
+        $valor1 = (float) $request->input('valor1');
+        $resultado = 2 * pi() * $valor1;
+
+        return redirect()->back()->with('resultado', "O Perímetro do círculo é: " . round($resultado, 2) . "unidades");        
     }
 
 
