@@ -17,13 +17,13 @@
             @CSRF
             <div class="row mb-3">
                 <div class="col-md-6">
-                    <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Insira o Valor em Metros " required>
+                    <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Insira o Valor em KM " required>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-success">Calcular</button>
+                    <button type="submit" class="btn btn-success">Converter</button>
                 </div>
             </div>
         </form>

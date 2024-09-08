@@ -23,7 +23,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <button type="submit" class="btn btn-success">Calcular</button>
+                    <button type="submit" class="btn btn-success">Converter</button>
                 </div>
             </div>
         </form>

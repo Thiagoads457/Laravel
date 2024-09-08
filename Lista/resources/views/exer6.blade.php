@@ -11,7 +11,7 @@
 
 <body>
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Converter Temperatura</h2>
+        <h2 class="text-center mb-4">Converter Celsius em Fahrenheit</h2>
         <form action="/respostaExer6" method="POST" class="border p-4 rounded">
             @csrf 
             <div class="row mb-3">

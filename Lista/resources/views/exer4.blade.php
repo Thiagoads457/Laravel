@@ -15,11 +15,11 @@
             <div class="row mb-3">
                 <div class="col-md-4">
                     <label for="valor1" class="form-label">1º Número</label>
-                    <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Inserir Número" required>
+                    <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Insera um Número" required>
                 </div>
                 <div class="col-md-4">
                     <label for="valor2" class="form-label">2º Número</label>
-                    <input type="number" name="valor2" id="valor2" class="form-control" placeholder="Inserir Número" required>
+                    <input type="number" name="valor2" id="valor2" class="form-control" placeholder="Insera um Número" required>
                 
             </div>
 
@@ -29,6 +29,7 @@
                 </div>
             </div>
         </form>
+        
     </div>
 </body>
 </html>

@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/js/app.js')
-    <title>Exercício 17</title>
+    <title>Exercício 18</title>
 </head>
 <body>
     <div class="container mt-5">
 
     <h2 class="text-center mb-4">Calcular Juros Composto</h2>
-        <form action="/respostaExer6" method="POST" class="border p-4 rounded">
+        <form action="/respostaExer18" method="POST" class="border p-4 rounded">
             @CSRF
             <div class="row mb-3">
                 <div class="col-md-4">

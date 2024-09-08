@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite('resources/js/app.js')
-    <title>Exercício 16</title>
+    <title>Exercício 20</title>
 </head>
 <body>
 <div class="container mt-5">

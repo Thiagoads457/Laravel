@@ -15,11 +15,11 @@
         <div class="row mb-3">
             <div class="col-md-4">
                 <label for="valor1" class="form-label">Largura</label>
-                <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Informa a Largura" required>
+                <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Informe a Largura" required>
             </div>
             <div class="col-md-4">
                 <label for="valor2" class="form-label">Altura</label>
-                <input type="number" name="valor2" id="valor2" class="form-control" placeholder="Informar a Altura" required>
+                <input type="number" name="valor2" id="valor2" class="form-control" placeholder="Informe a Altura" required>
             
         </div>
 

@@ -13,8 +13,12 @@ class ListaController extends Controller
     public function calcularExer1(Request $request){
         $valor1 = (int)$request->input('valor1');
         $valor2 = (int)$request->input('valor2');
-        return $valor1+$valor2;
+        $resultado = $valor1 + $valor2;
+    
+        // Armazenando o resultado na sessão e redirecionando
+        return redirect()->back()->with('resultado', "A soma de $valor1 e $valor2 é: $resultado");
     }
+    
 
     public function mostrarExer2(){
         return view("exer2");
@@ -23,7 +27,10 @@ class ListaController extends Controller
     public function calcularExer2(Request $request){
         $valor1 = (int)$request->input('valor1');
         $valor2 = (int)$request->input('valor2');
-        return $valor2 - $valor1;
+        $resultado = $valor1 - $valor2;
+
+        return redirect()->back()->with('resultado', "A subtração de $valor1 e $valor2 é: $resultado");
+        
     }
 
     public function mostrarExer3(){
