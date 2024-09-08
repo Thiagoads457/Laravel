@@ -80,16 +80,23 @@ class ListaController extends Controller
 
     public function calcularExer6(Request $request) {
         $celsius = (int) $request->input('celsius');
-        $fahrenheit = ($celsius * 9/5) + 32;
+        $resultado = ($celsius * 9/5) + 32;
     
-        
-        return redirect()->back()->with('resultado',"Temperatura em Fahrenheit: $fahrenheit");
-    }
-    
+        return redirect()->back()->with('resultado', "A Temperatura em $celsius é: $resultado º");
+       
+    }    
     
 
     public function mostrarExer7(){
         return view("exer7");
+    }
+
+    public function calcularExer7(Request $request){
+        $fahrenheit = (int) $request->input('fahrenehit');
+        $resultado = ($fahrenheit - 32) * 5/9;
+
+        return redirect()->back()->with('resultado', "A Temperatura em $fahrenheit é: $resultado º");
+
     }
 
     public function mostrarExer8(){
