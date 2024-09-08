@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 class ListaController extends Controller
 {
@@ -103,9 +104,26 @@ class ListaController extends Controller
         return view("exer8");
     }
 
+    public function calcularExer8(Request $request){
+        $valor1 = (float) $request->input('valor1');
+        $valor2 = (float) $request->input('valor2');
+        $resultado = $valor1 * $valor2;
+        
+        return redirect()->back()->with('resultado', "A área do retângulo é de $resultado ");
 
+    }
+
+    
     public function mostrarExer9(){
         return view("exer9");
+    }
+
+    public function calcularExer9(Request $request){
+        $valor1 = (float) $request->input('valor1');
+        $resultado = pi() * pow($valor1,2);
+
+        return redirect()->back()->with('resultado', "A área do círculo é: " . round($valor1, 2) . " unidades quadradas");
+        
     }
 
 
