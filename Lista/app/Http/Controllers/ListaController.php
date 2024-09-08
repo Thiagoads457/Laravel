@@ -178,7 +178,7 @@ class ListaController extends Controller
         $valor1 = (int) $request->input('valor1');
         $resultado = $valor1 * 100;
 
-        return redirect()->back()->with('resultado', "$valor1 metros é igual a $resultado centímetros");
+        return redirect()->back()->with('resultado', "$valor1 metro(s) é igual a $resultado centímetros");
         
     }
 
@@ -191,7 +191,7 @@ class ListaController extends Controller
         $valor1 = (int) $request->input('valor1');
         $resultado = $valor1 * 0.621371;
 
-        return redirect()->back()->with('resultado', "$valor1 quilômetros é igual a " . round($resultado, 2) . " milhas");
+        return redirect()->back()->with('resultado', "$valor1 quilômetro(s) é igual a " . round($resultado, 2) . " milha(s)");
 
     }
 

@@ -21,7 +21,7 @@
                 </div>
                 <div class="col-md-4">
                     <label for="valor2" class="form-label">Altura</label>
-                    <input type="number" name="valor2" id="valor2" class="form-control" placeholder="Informe sua Altura" required>
+                    <input type="text" name="valor2" id="valor2" class="form-control" placeholder="Informe sua Altura" required>
 
                 </div>
 

@@ -54,7 +54,7 @@ Route::get('/exer12', [ListaController::class, 'mostrarExer12']);
 
 Route::post('/respostaExer12', [ListaController::class, 'calcularExer12']);
 
-Route::get('/exer13', [ListaController::class, 'mostrarExer']);
+Route::get('/exer13', [ListaController::class, 'mostrarExer13']);
 
 Route::post('/respostaExer13', [ListaController::class, 'calcularExer13']);
 
