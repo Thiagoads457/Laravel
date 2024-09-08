@@ -17,7 +17,7 @@ class ListaController extends Controller
         $resultado = $valor1 + $valor2;
     
         
-        return redirect()->back()->with('resultado', "A soma de $valor1 e $valor2 é: $resultado");
+        return redirect()->back()->with('resultado', "A soma de $valor1 + $valor2 é : $resultado");
     }
     
 
@@ -30,7 +30,7 @@ class ListaController extends Controller
         $valor2 = (int)$request->input('valor2');
         $resultado = $valor1 - $valor2;
 
-        return redirect()->back()->with('resultado', "A subtração de $valor1 e $valor2 é: $resultado");
+        return redirect()->back()->with('resultado', "A subtração de $valor1 - $valor2 é : $resultado");
         
     }
 
@@ -42,7 +42,9 @@ class ListaController extends Controller
         $valor1 = (int)$request->input('valor1');
         $valor2 = (int)$request->input('valor2');
         $resultado = $valor1 * $valor2;
-        return "Resposta: $resultado";           
+
+        return redirect()->back()->with('resultado', "A multiplicação de $valor1 x $valor2 é : $resultado");
+               
     }
 
     public function mostrarExer4(){
@@ -56,7 +58,9 @@ class ListaController extends Controller
             return "Divisão por Zero Fera";
         }
         $resultado = $valor1 / $valor2;
-        return "Resposta: $resultado";
+
+        return redirect()->back()->with('resultado', "A divisão de $valor1 / $valor2 é : $resultado");
+        
     }
 
     public function mostrarExer5(){
@@ -71,7 +75,9 @@ class ListaController extends Controller
         
         $resultadoFormatado = number_format($resultado, 2);
 
-        return "resposta: $resultadoFormatado";       
+        return redirect()->back()->with('resultado', "A média das notas $valor1, $valor2, $valor3 é : $resultadoFormatado");
+
+              
         
     }
 
@@ -83,7 +89,7 @@ class ListaController extends Controller
         $celsius = (int) $request->input('celsius');
         $resultado = ($celsius * 9/5) + 32;
     
-        return redirect()->back()->with('resultado', "A Temperatura em $celsius é: $resultado º");
+        return redirect()->back()->with('resultado', "A Temperatura de $celsius ºCelsius é : $resultado º fahrenheit");
        
     }    
     
@@ -93,10 +99,10 @@ class ListaController extends Controller
     }
 
     public function calcularExer7(Request $request){
-        $fahrenheit = (int) $request->input('fahrenehit');
+        $fahrenheit = (int) $request->input('fahrenheit');
         $resultado = ($fahrenheit - 32) * 5/9;
 
-        return redirect()->back()->with('resultado', "A Temperatura em $fahrenheit é: $resultado º");
+        return redirect()->back()->with('resultado', "A Temperatura de $fahrenheit º fahrenheit é : $resultado º celsius");
 
     }
 
@@ -109,7 +115,7 @@ class ListaController extends Controller
         $valor2 = (float) $request->input('valor2');
         $resultado = $valor1 * $valor2;
         
-        return redirect()->back()->with('resultado', "A área do retângulo é de $resultado ");
+        return redirect()->back()->with('resultado', "A área do retângulo é de $resultado m² ");
     }
 
     
