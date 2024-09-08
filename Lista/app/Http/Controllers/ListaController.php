@@ -155,6 +155,14 @@ class ListaController extends Controller
         return view("exer12");
     }
 
+    public function calcularExer12(Request $request){
+        $valor1 = (int) $request->input('valor1');
+        $resultado = $valor1 * 100;
+
+        return redirect()->back()->with('resultado', "$valor1 metros é igual a $resultado centímetros");
+        
+    }
+
 
     public function mostrarExer13(){
         return view("exer13");
