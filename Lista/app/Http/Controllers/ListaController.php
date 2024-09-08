@@ -216,10 +216,32 @@ class ListaController extends Controller
         return view("exer16");
     }
 
+    public function calcularExer16(Request $request){
+    $valor1 = (float) $request->input('valor1');
+    $valor2 = (float) $request->input('valor2');
+        
+    $desconto = ($valor2 / 100) * $valor1;
+
+    $resultado = $valor1 - $desconto;
+
+    return redirect()->back()->with('resultado', "Preço original: " . round($valor1, 2) . " | Preço com desconto: " . round($resultado, 2));
+    }
+
 
     public function mostrarExer17(){
         return view("exer17");
     }
+
+    public function calcularExer17(Request $request){
+    $valor1 = (float) $request->input('valor1'); //capital
+    $valor2 = (float) $request->input('valor2'); //txjuros
+    $valor3 = (float) $request->input('valor3'); //periodo
+    
+    $resultado = $valor1 * ($valor2 / 100) * $valor3;
+
+    return redirect()->back()->with('resultado', "Os juros simples são: " . round($resultado, 2));
+    }
+
 
 
     public function mostrarExer18(){
