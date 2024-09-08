@@ -248,13 +248,49 @@ class ListaController extends Controller
         return view("exer18");
     }
 
+    public function calcularExer18(Request $request){
+    $valor1 = (float) $request->input('valor1'); //capital
+    $valor2 = (float) $request->input('valor2'); //tx de juros
+    $valor3 = (float) $request->input('valor3'); //periodo
+    
+    $taxaDecimal = $valor2 / 100;
+    
+    $resultado = $valor1 * pow((1 + $taxaDecimal), $valor3);
+
+    return redirect()->back()->with('resultado', "O montante com juros compostos é: " . round($resultado, 2));
+    }
 
     public function mostrarExer19(){
         return view("exer19");
+    }
+
+    public function calcularExer19(Request $request){
+    $valor1 = (float) $request->input('valor1'); //dias
+    
+    $horas = $valor1 * 24;
+    $minutos = $horas * 60;
+    $segundos = $minutos * 60;
+
+    return redirect()->back()->with('resultado', "$valor1 dias equivalem a $horas horas, $minutos minutos e $segundos segundos.");
     }
 
 
     public function mostrarExer20(){
         return view("exer20");
     }
+
+    public function calcularExer20(Request $request){
+    $valor1 = (float) $request->input('valor1'); //distacia
+    $valor2 = (float) $request->input('valor2'); //tempo
+    
+    if ($valor2 > 0) {
+        $velocidadeMedia = $valor1 / $valor2;
+        $resultado = "A velocidade média é: " . round($velocidadeMedia, 2) . " unidades por tempo.";
+    } else {
+        $resultado = "O tempo deve ser maior que zero.";
+    }
+
+    return redirect()->back()->with('resultado', $resultado);
+    }
+
 }
