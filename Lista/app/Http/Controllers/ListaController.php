@@ -16,7 +16,7 @@ class ListaController extends Controller
         $valor2 = (int)$request->input('valor2');
         $resultado = $valor1 + $valor2;
     
-        // Armazenando o resultado na sessão e redirecionando
+        
         return redirect()->back()->with('resultado', "A soma de $valor1 e $valor2 é: $resultado");
     }
     
@@ -156,6 +156,19 @@ class ListaController extends Controller
     }
 
     public function calcularExer12(Request $request){
+        $valor1 = (float) $request->input('valor1');
+        $valor2 = (float) $request->input('valor2');
+        $resultado = pow($valor1,$valor2);
+
+        return redirect()->back()->with('resultado', "$valor1 elevado a $valor2 é igual a " . round($resultado, 2));
+    }
+
+
+    public function mostrarExer13(){
+        return view("exer13");
+    }
+
+    public function calcularExer13(Request $request){
         $valor1 = (int) $request->input('valor1');
         $resultado = $valor1 * 100;
 
@@ -164,20 +177,40 @@ class ListaController extends Controller
     }
 
 
-    public function mostrarExer13(){
-        return view("exer13");
-    }
-
-
     public function mostrarExer14(){
         return view("exer14");
     }
 
+    public function calcularExer14(Request $request){
+        $valor1 = (int) $request->input('valor1');
+        $resultado = $valor1 * 0.621371;
+
+        return redirect()->back()->with('resultado', "$valor1 quilômetros é igual a " . round($resultado, 2) . " milhas");
+
+    }
 
     public function mostrarExer15(){
         return view("exer15");
     }
 
+    public function calcularExer15(Request $request){
+    
+    $valor1 = (float) $request->input('valor1');
+    $valor2 = (float) $request->input('valor2');
+    
+    if ($valor2 > 0) {
+        $imc = $valor1 / pow($valor2, 2);
+    } else {
+        $imc = 0;
+        $resultado = "A altura deve ser um valor positivo.";
+    }
+
+    if ($imc > 0) {
+        $resultado = "Seu IMC é: " . round($imc, 2);
+    }
+    
+    return redirect()->back()->with('resultado', $resultado);
+    }
 
     public function mostrarExer16(){
         return view("exer16");
