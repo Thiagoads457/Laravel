@@ -17,7 +17,7 @@
             <div class="row mb-3">
                 <div class="col-md-4">
                     <label for="valor1" class="form-label">Capital</label>
-                    <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Informe o Capital required>
+                    <input type="number" name="valor1" id="valor1" class="form-control" placeholder="Informe o Capital" required>
                 </div>
                 <div class=" col-md-4">
                     <label for="valor2" class="form-label">Tx de Juros</label>
@@ -41,6 +41,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

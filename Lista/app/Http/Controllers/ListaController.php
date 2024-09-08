@@ -230,7 +230,7 @@ class ListaController extends Controller
 
     $resultado = $valor1 - $desconto;
 
-    return redirect()->back()->with('resultado', "Preço original: " . round($valor1, 2) . " | Preço com desconto: " . round($resultado, 2));
+    return redirect()->back()->with('resultado', "Preço original: R$" . round($valor1, 2) . " | Preço com desconto: R$ " . round($resultado, 2));
     }
 
 
@@ -245,7 +245,7 @@ class ListaController extends Controller
     
     $resultado = $valor1 * ($valor2 / 100) * $valor3;
 
-    return redirect()->back()->with('resultado', "Os juros simples são: " . round($resultado, 2));
+    return redirect()->back()->with('resultado', "Os juros simples são: " . round($resultado, 2)."%");
     }
 
 

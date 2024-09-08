@@ -11,7 +11,7 @@
 <body>
     <div class="container mt-5">
 
-        <h2 class="text-center mb-4">Calcular Juros Composto</h2>
+        <h2 class="text-center mb-4">Calcular Juros Simples</h2>
         <form action="/respostaExer17" method="POST" class="border p-4 rounded">
             @CSRF
             <div class="row mb-3">
